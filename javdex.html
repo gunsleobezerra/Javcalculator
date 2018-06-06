@@ -3,18 +3,21 @@
 <head>
 	<meta charset="utf-8">
 	<title>JavaScript Calculator</title>
+	
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/calcstyle.css">
+	<link rel="icon" type="image/png" href="img/favicon.png">
 	<script type="text/javascript" src="js/calcbrain.js"></script>
 </head>
 <body>
 
-	<h1 class="text-center">Java Script Calculator</h1>
+	<h1 class="text-center">JavaScript Calculator</h1>
 
 
-	<div id="block-calculator">
+	<div id="block-calculator" alt="Calculadora JavaScript">
 
-	<p id="save" style="display : none" ></p>
+		<p id="save" style="display : none" ></p>
+		<p id="save2" style="display : none" ></p>
 		<div class="card border-dark mb-3" style="max-width: 18rem;">
 			<div id="displayaritimetic" class="card-header text-right"></div>
 			<div class="card-body text-dark">
@@ -27,8 +30,13 @@
 							<button type="button" onclick='document.getElementById("displayaritimetic").innerHTML = getElementById("displayaritimetic").textContent + 9' class="btn btn-secondary">9</button>
 							<button type="button" onclick='document.getElementById("displayaritimetic").innerHTML = ""' class="btn btn-secondary">CE</button>
 						</div>
-						<button type="button" onclick='save(document.getElementById("displayaritimetic").textContent)'  id="sum" class="btn btn-dark"> + </button>
 						
+						<div class="operations">
+							<button type="button" onclick="save('a')"  id="sume" class="btn btn-dark breath"> + </button>
+							<button type="button" onclick="save('b')"  id="sub" class="btn btn-dark breath"> - </button>
+							<button type="button" onclick="save('c')"  id="mult" class="btn btn-dark breath"> * </button>
+							<button type="button" onclick="save('d')"  id="div" class="btn btn-dark breath"> ÷ </button>
+						</div>
 
 
 						<div class="btn-toolbar mb-3 buts" role="toolbar" aria-label="Toolbar with button groups">
@@ -50,12 +58,15 @@
 						</div>
 
 						<button type="button" onclick='document.getElementById("displayaritimetic").innerHTML = getElementById("displayaritimetic").textContent + 0' style="width: 45%" class="btn btn-secondary btn-lg">0</button>
-						<button type="button" onclick= 'sum()' id="equals" style="width: 45%" class="btn btn-dark btn-lg"> = </button>
+						<button type="button" onclick= "validates()" id="equals" style="width: 45%" class="btn btn-dark btn-lg"> = </button>
 
 					</div>
 				</div>
 
-				
+			</div>
+		</div>
+	</div>
+
 
 </body>
 </html>
