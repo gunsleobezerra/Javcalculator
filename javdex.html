@@ -5,6 +5,7 @@
 	<title>JavaScript Calculator</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/calcstyle.css">
+	<script type="text/javascript" src="js/calcbrain.js"></script>
 </head>
 <body>
 
@@ -12,8 +13,10 @@
 
 
 	<div id="block-calculator">
+
+	<p id="save" style="display : none" ></p>
 		<div class="card border-dark mb-3" style="max-width: 18rem;">
-			<div id="displayaritimetic" class="card-header text-right">0</div>
+			<div id="displayaritimetic" class="card-header text-right"></div>
 			<div class="card-body text-dark">
 				
 				<div id="buttons group" class="container">
@@ -22,9 +25,9 @@
 							<button type="button" onclick='document.getElementById("displayaritimetic").innerHTML = getElementById("displayaritimetic").textContent + 7' class="btn btn-secondary">7</button>
 							<button type="button" onclick='document.getElementById("displayaritimetic").innerHTML = getElementById("displayaritimetic").textContent + 8' class="btn btn-secondary">8</button>
 							<button type="button" onclick='document.getElementById("displayaritimetic").innerHTML = getElementById("displayaritimetic").textContent + 9' class="btn btn-secondary">9</button>
-							<button type="button" onclick='document.getElementById("displayaritimetic").innerHTML = "0"' class="btn btn-secondary">CE</button>
+							<button type="button" onclick='document.getElementById("displayaritimetic").innerHTML = ""' class="btn btn-secondary">CE</button>
 						</div>
-						<button type="button" id="sum" class="btn btn-dark"> + </button>
+						<button type="button" onclick='save(document.getElementById("displayaritimetic").textContent)'  id="sum" class="btn btn-dark"> + </button>
 						
 
 
@@ -47,12 +50,12 @@
 						</div>
 
 						<button type="button" onclick='document.getElementById("displayaritimetic").innerHTML = getElementById("displayaritimetic").textContent + 0' style="width: 45%" class="btn btn-secondary btn-lg">0</button>
-						<button type="button" id="equals" style="width: 45%" class="btn btn-dark btn-lg"> = </button>
+						<button type="button" onclick= 'sum()' id="equals" style="width: 45%" class="btn btn-dark btn-lg"> = </button>
 
 					</div>
 				</div>
 
-				<script type="text/javascript" src="js/calcbrain.js"></script>
+				
 
 </body>
 </html>
