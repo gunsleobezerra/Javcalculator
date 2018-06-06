@@ -13,37 +13,41 @@
 
 	<div id="block-calculator">
 		<div class="card border-dark mb-3" style="max-width: 18rem;">
-			<div class="card-header text-right">0</div>
+			<div id="displayaritimetic" class="card-header text-right">0</div>
 			<div class="card-body text-dark">
 				
 				<div id="buttons group" class="container">
 					<div class="btn-toolbar mb-3 buts" role="toolbar" aria-label="Toolbar with button groups">
 						<div class="btn-group mr-2" role="group" aria-label="First group">
-							<button type="button" class="btn btn-secondary">7</button>
-							<button type="button" class="btn btn-secondary">8</button>
-							<button type="button" class="btn btn-secondary">9</button>
+							<button type="button" onclick='document.getElementById("displayaritimetic").innerHTML = getElementById("displayaritimetic").textContent + 7' class="btn btn-secondary">7</button>
+							<button type="button" onclick='document.getElementById("displayaritimetic").innerHTML = getElementById("displayaritimetic").textContent + 8' class="btn btn-secondary">8</button>
+							<button type="button" onclick='document.getElementById("displayaritimetic").innerHTML = getElementById("displayaritimetic").textContent + 9' class="btn btn-secondary">9</button>
 							<button type="button" class="btn btn-secondary">CE</button>
 						</div>
+						<button type="button" id="sum" class="btn btn-dark"> + </button>
+						
+
 
 						<div class="btn-toolbar mb-3 buts" role="toolbar" aria-label="Toolbar with button groups">
 							<div class="btn-group mr-2" role="group" aria-label="First group">
-								<button type="button" class="btn btn-secondary">4</button>
-								<button type="button" class="btn btn-secondary">5</button>
-								<button type="button" class="btn btn-secondary">6</button>
+								<button type="button" onclick='document.getElementById("displayaritimetic").innerHTML = getElementById("displayaritimetic").textContent + 4' class="btn btn-secondary">4</button>
+								<button type="button" onclick='document.getElementById("displayaritimetic").innerHTML = getElementById("displayaritimetic").textContent + 5' class="btn btn-secondary">5</button>
+								<button type="button" onclick='document.getElementById("displayaritimetic").innerHTML = getElementById("displayaritimetic").textContent + 6' class="btn btn-secondary">6</button>
 
 							</div>
 						</div>
 
 						<div class="btn-toolbar mb-3 buts" role="toolbar" aria-label="Toolbar with button groups">
 							<div class="btn-group mr-2" role="group" aria-label="First group">
-								<button type="button" class="btn btn-secondary">1</button>
-								<button type="button" class="btn btn-secondary">2</button>
-								<button type="button" class="btn btn-secondary">3</button>
+								<button type="button" onclick='document.getElementById("displayaritimetic").innerHTML = getElementById("displayaritimetic").textContent + 1' class="btn btn-secondary">1</button>
+								<button type="button" onclick='document.getElementById("displayaritimetic").innerHTML = getElementById("displayaritimetic").textContent + 2' class="btn btn-secondary">2</button>
+								<button type="button" onclick='document.getElementById("displayaritimetic").innerHTML = getElementById("displayaritimetic").textContent + 3' class="btn btn-secondary">3</button>
 
 							</div>
 						</div>
 
-						<button type="button" style="width: 50%" class="btn btn-secondary btn-lg">0</button>
+						<button type="button" onclick='document.getElementById("displayaritimetic").innerHTML = getElementById("displayaritimetic").textContent + 0' style="width: 45%" class="btn btn-secondary btn-lg">0</button>
+						<button type="button" id="equals" style="width: 45%" class="btn btn-dark btn-lg"> = </button>
 
 					</div>
 				</div>
