@@ -1,4 +1,45 @@
 
+
+UPdata();
+checkforZero(".numberbutton")
+
+
+function checkforZero(buttonclass) {
+	
+	var butss = document.querySelectorAll(buttonclass);
+
+	console.log(butss.lenght);
+
+
+}
+
+function UPdata () {
+	
+	var datadisplay = document.querySelector(".date");
+
+	datadisplay.classList.add("dataclass");
+
+
+	time = new Date();
+
+	
+
+	datadisplay.textContent = getdata();
+
+	
+
+}
+
+function getdata () {
+	
+	time = new Date();
+	daysofweek = ["Dom","Seg","Ter","Qua","Qui","Sex","Sáb"];
+
+	return daysofweek[time.getDay()] + " - " + time.getDate() + "/" + time.getMonth() + "/" + time.getFullYear();
+
+}
+
+
 function validates() {
 
 	var destiny = document.querySelector("#save2");
@@ -96,7 +137,9 @@ function save (operation){
 
 	savedata.textContent = display.textContent;
 	console.log(savedata.textContent);
-	display.textContent = "";
+	display.textContent = "0";
 
 }
+
+
 
